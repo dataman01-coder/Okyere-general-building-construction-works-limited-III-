@@ -1,0 +1,379 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: #FFFDF9;
+}
+
+.header{
+    background-image: linear-gradient(rgba(4,9,30,0.55),rgba(4,9,30,0.55)), url(bg.png);
+    width:100%;
+    min-height:75vh;
+    background-position:center;
+    background-size:cover;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2% 10%;
+}
+
+.logo{
+    color:#fff;
+    text-decoration:none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    display: inline-block;
+    padding-right: 12px;
+}
+
+.nav-links ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    &:hover{
+        border-bottom: 2px #FFA500 solid;
+    }
+}
+
+.text-items{
+    width:60%;
+    margin:auto;
+    text-align:center;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-40%);
+    color:#fff;
+}
+
+.text-items h1{
+    font-size:45px;
+    line-height:1.3;
+    font-weight:600;
+    padding-bottom:10px;
+}
+
+.text-items p{
+    font-size: 25px;
+    font-weight: 400;
+    line-height:1.3;
+    padding:15px 50px;
+}
+
+.cta-btn{
+    text-decoration: none;
+    display: inline-block;
+    background:#FFA500;
+    color:#fff;
+    padding:9px 14px;
+    font-size: 18px;
+    &:hover{
+        background: #fff;
+        color:#000;
+    }
+}
+
+.hide-desktop{
+    display: none;
+}
+@media(max-width:700px){
+    .hide-desktop{
+        display: unset;
+    }
+    .logo{
+        font-size: 19px;
+    }
+    nav{
+        padding:5% 10%;
+    }
+    .nav-links{
+        position:absolute;
+        top:0;
+        right:0;
+        height:100%;
+        width:50%;
+        background:#FFA500;
+        text-align: left;
+        z-index: 100;
+        padding-left: 10px;
+        padding-top:10px;
+        display: none;
+    }
+    .nav-links ul li{
+        display: block;
+        padding:5px 0;
+        font-weight:bold;
+    }
+
+    .nav-links ul:nth-of-type(1){
+        margin:5px 0;
+    }
+
+    .text-items h1{
+        font-size:28px;
+        padding-bottom: 0;
+    }
+    .text-items p{
+        font-size: 14px;
+        padding:15px 0px;
+    }
+    .cta-btn{
+        padding:6px 12px;
+    }
+
+    nav img{
+        width:30px;
+        cursor:pointer;
+    }
+    .nav-links ul li a:hover{
+        border-bottom:unset;
+    }
+
+}
+
+
+/* ABOUT */
+.about{
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+
+.about h1{
+    margin-top:100px;
+    padding:10px 0;
+}
+
+.about p{
+    padding:10px 0;
+    color:#777;
+    font-size: 20px;
+}
+
+.about-img{
+    margin-top: 70px;
+    width:100%;
+    overflow: hidden;
+    height:400px;
+    background-image: url(about\ us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Our services */
+.our-services{
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+
+.our-services h1{
+    margin-top: 100px;
+    padding:10px 0;
+    font-weight: 600;
+}
+
+.our-services p{
+    padding:10px 0;
+    color:#777;
+    line-height: 1.3;
+    font-size: 20px;
+}
+.row{
+    margin-top:40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-col{
+    flex-basis:32%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin:25px 0;
+}
+
+.service-col img{
+    width:100%;
+    height:500px;
+}
+
+.btn-b{
+    margin-top:25px;
+    padding: 10px 14px;
+    font-size:25px;
+    border-radius: 10px;
+    &:hover{
+        border:#000 2px solid;
+    }
+}
+
+@media(max-width:700px){
+    .row{
+        display: block;
+    }
+    .btn-b{
+        font-size: 17px;
+    }
+
+}
+
+
+/* PROJECTS */
+.projects{
+    width:90%;
+    margin:auto;
+    text-align: center;
+}
+
+.projects h1{
+    margin-top: 100px;
+    line-height: 1.3;
+    padding:10px;
+}
+.projects p{
+    color: #777;
+    padding: 10px 0;
+    line-height: 1.3;
+    font-size: 20px;
+}
+
+.project-col{
+    flex-basis:32%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin:25px 0;
+}
+
+.project-col img{
+    width:100%;
+}
+
+/* Testimonials */
+.testimonials{
+    width:90%;
+    margin:auto;
+    text-align: center;
+}
+
+.testimonials h1{
+    margin-top: 100px;
+    padding:10px 0;
+}
+.testimonials p{
+    padding: 10px 0;
+    color: #777;
+    font-size: 20px;
+}
+
+.testimonial-col{
+    background-color: #F3CDA2;
+    margin:10px;
+    border-radius: 10px;
+    padding:15px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.testimonial-col h3{
+    text-align: left;
+    font-size:20px;
+}
+
+/* Do you want to own a house */
+
+.own-a-house{
+    width:90%;
+    margin:auto;
+    text-align: center;
+}
+
+.own-a-house h1{
+    padding:10px 50px;
+    margin-top: 100px;
+}
+
+.own-a-house p{
+    color:#777;
+    padding:10px 35px;
+    font-size: 20px;
+}
+
+.own-a-house-col{
+    flex-basis: 31%;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+
+.own-a-house-col img{
+    width:100%;
+    border-radius: 10px;
+    border:.5px solid #000;
+}
+
+.own-a-house-col h3{
+    text-align: left;
+    padding:10px 0;
+}
+
+/* Footer */
+footer{
+    background:#F3CDA2;
+    width:100%;
+    padding:60px 250px;
+    margin-top: 100px;
+}
+
+.sitemap{
+    display: flex;
+    flex-direction: column;
+}
+
+.sitemap a{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+
+.others{
+    text-align: right;
+    h4{
+        text-align: right;
+    }
+}
+
+@media(max-width:700px){
+    .footer{
+        text-align:center;
+    }
+    .others{
+        padding-top: 30px;
+        text-align: center;
+        h4{
+            text-align: center;
+        }
+        
+    }
+    footer{
+        padding: 60px 0;
+    }
+}
+
+
+
+
